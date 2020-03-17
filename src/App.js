@@ -10,7 +10,7 @@ const App = () => {
       <Switch>
         <Route path='/comingsoon' component={ComingSoon} />
         <Route exact path='/home' component={Home} />
-        <Route path='/receipt' component={Receipt} />
+        <Route path='/receipt/:token' component={Receipt} />
         <Redirect to='/comingsoon' />
       </Switch>
     </BrowserRouter>
