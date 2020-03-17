@@ -47,13 +47,17 @@ const Receipt = ({ match }) => {
   };
   return (
     <>
+      {verifiedToken.flatNo && <p>Flat Number: {verifiedToken.flatNo}</p>}
+      {/* <p>{JSON.stringify(verifiedToken)}</p> */}
       {verifiedToken.verified && (
         <>
           <p>Received From: {verifiedToken.received}</p>
           <p>Collected By: {verifiedToken.collected}</p>
           <p>Amount: {verifiedToken.amount}</p>
-          <p>Date: {Date(new Date(verifiedToken.timestamp.seconds * 1000))}</p>
         </>
+      )}
+      {verifiedToken.timestamp && (
+        <p>Date: {Date(new Date(verifiedToken.timestamp.seconds * 1000))}</p>
       )}
     </>
   );
