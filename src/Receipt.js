@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { notification } from 'antd';
+import { notification, Card } from 'antd';
 import styled, { keyframes } from 'styled-components';
 import { zoomIn } from 'react-animations';
 import './styles/Receipt.css';
@@ -95,7 +95,7 @@ const Receipt = ({ match }) => {
             src='https://assets6.lottiefiles.com/packages/lf20_5GRn9X.json'
             background='transparent'
             speed='1'
-            style={{ width: '300px', height: '300px' }}
+            style={{ width: '600px', height: '600px' }}
             // loop
             // controls
             autoplay
@@ -108,25 +108,118 @@ const Receipt = ({ match }) => {
       <div className='App'>
         <header className='Success-header'>
           <ZoomInDiv>
-            <>
-              <p>Receipt Design yet to be made.</p>
-              {verifiedToken.flatNo && (
-                <p>Flat Number: {verifiedToken.flatNo}</p>
-              )}
-              {/* <p>{JSON.stringify(verifiedToken)}</p> */}
-              {verifiedToken.verified && (
-                <>
-                  <p>Received From: {verifiedToken.received}</p>
-                  <p>Collected By: {verifiedToken.collected}</p>
-                  <p>Amount: {verifiedToken.amount}</p>
-                </>
-              )}
-              {verifiedToken.timestamp && (
-                <p>
-                  Date: {Date(new Date(verifiedToken.timestamp.seconds * 1000))}
-                </p>
-              )}
-            </>
+            <Card
+              hoverable
+              style={{ width: 240 }}
+              bodyStyle={{
+                boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+                padding: 0
+              }}
+              // cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+            >
+              {/* <lottie-player
+                src='https://assets1.lottiefiles.com/packages/lf20_41nvak.json'
+                background='transparent'
+                speed='5'
+                style={{ display: 'flex' }}
+                loop
+                autoplay
+              /> */}
+              {/* <lottie-player
+                src='https://assets10.lottiefiles.com/packages/lf20_7W0ppe.json'
+                background='transparent'
+                speed='1'
+                // style={{ width: '300px', height: '300px' }}
+                loop
+                autoplay
+              /> */}
+
+              <div style={{ display: 'flex' }}>
+                <lottie-player
+                  src='https://assets1.lottiefiles.com/packages/lf20_I9GBQj.json'
+                  speed='1'
+                  style={{ position: 'relative', zIndex: 5, width: '100%' }}
+                  loop
+                  autoplay
+                />
+
+                <lottie-player
+                  src='https://assets10.lottiefiles.com/packages/lf20_7W0ppe.json'
+                  background='transparent'
+                  speed='1'
+                  style={{ position: 'absolute', zIndex: 6 }}
+                  loop
+                  autoplay
+                />
+                {verifiedToken.flatNo ? (
+                  <p
+                    style={{ top: 0, left: 0, zIndex: 7, position: 'absolute' }}
+                  >
+                    ID: {verifiedToken.flatNo}
+                  </p>
+                ) : (
+                  <p
+                    style={{ top: 0, left: 0, zIndex: 7, position: 'absolute' }}
+                  >
+                    Well-Wisher
+                  </p>
+                )}
+                {verifiedToken.timestamp && (
+                  <p style={{ top: 0, right: 0, zIndex: 7 }}>
+                    Date:
+                    {new Date(verifiedToken.timestamp.seconds * 1000).getDate()}
+                    /
+                    {new Date(
+                      verifiedToken.timestamp.seconds * 1000
+                    ).getMonth() + 1}
+                    /
+                    {new Date(
+                      verifiedToken.timestamp.seconds * 1000
+                    ).getFullYear()}
+                  </p>
+                )}
+              </div>
+              <div style={{ display: 'flex' }}>
+                <lottie-player
+                  src='https://assets5.lottiefiles.com/packages/lf20_TgAHwk.json'
+                  speed='1'
+                  style={{ position: 'relative', zIndex: 5, width: '100%' }}
+                  loop
+                  autoplay
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    zIndex: 6,
+                    bottom: 1,
+                    left: 0,
+                    right: 0,
+                    margin: 'auto'
+                  }}
+                >
+                  {/* <p>{JSON.stringify(verifiedToken)}</p> */}
+                  {verifiedToken.verified && (
+                    <p>
+                      <h3 style={{ fontWeight: 'bolder', padding: 0 }}>
+                        ₹ {verifiedToken.amount}
+                      </h3>
+                      <br />
+                      was contributed by
+                      <br />
+                      <h3 style={{ fontWeight: 'bolder', padding: 0 }}>
+                        {verifiedToken.received}
+                      </h3>
+                      <br />
+                      and was collected by
+                      <br></br>
+                      <h3 style={{ fontWeight: 'bolder', padding: 0 }}>
+                        {verifiedToken.collected}
+                      </h3>
+                    </p>
+                  )}
+                </div>
+              </div>
+            </Card>
           </ZoomInDiv>
         </header>
       </div>

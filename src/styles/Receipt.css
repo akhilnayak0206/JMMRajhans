@@ -8,3 +8,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
+
+p {
+  font-family: 'Brush Script MT', cursive;
+}
