@@ -138,7 +138,7 @@ const Receipt = ({ match }) => {
                 <lottie-player
                   src='https://assets1.lottiefiles.com/packages/lf20_I9GBQj.json'
                   speed='1'
-                  style={{ position: 'relative', zIndex: 5, width: '100%' }}
+                  style={{ position: 'absolute', zIndex: 5, width: '100%' }}
                   loop
                   autoplay
                 />
@@ -153,19 +153,36 @@ const Receipt = ({ match }) => {
                 />
                 {verifiedToken.flatNo ? (
                   <p
-                    style={{ top: 0, left: 0, zIndex: 7, position: 'absolute' }}
+                    style={{
+                      top: 0,
+                      left: 0,
+                      zIndex: 7,
+                      position: 'relative'
+                    }}
                   >
                     ID: {verifiedToken.flatNo}
                   </p>
                 ) : (
                   <p
-                    style={{ top: 0, left: 0, zIndex: 7, position: 'absolute' }}
+                    style={{
+                      top: 0,
+                      left: 0,
+                      zIndex: 7,
+                      position: 'relative'
+                    }}
                   >
                     Well-Wisher
                   </p>
                 )}
                 {verifiedToken.timestamp && (
-                  <p style={{ top: 0, right: 0, zIndex: 7 }}>
+                  <p
+                    style={{
+                      top: 0,
+                      right: 0,
+                      zIndex: 7,
+                      position: 'absolute'
+                    }}
+                  >
                     Date:
                     {new Date(verifiedToken.timestamp.seconds * 1000).getDate()}
                     /
