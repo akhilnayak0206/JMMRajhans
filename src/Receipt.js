@@ -1,8 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { notification, Card } from 'antd';
+import { notification, Card, Button, Popover } from 'antd';
 import styled, { keyframes } from 'styled-components';
 import { zoomIn } from 'react-animations';
 import './styles/Receipt.css';
+
+const month = [];
+month[0] = 'January';
+month[1] = 'February';
+month[2] = 'March';
+month[3] = 'April';
+month[4] = 'May';
+month[5] = 'June';
+month[6] = 'July';
+month[7] = 'August';
+month[8] = 'September';
+month[9] = 'October';
+month[10] = 'November';
+month[11] = 'December';
 
 const ZoomInAnimation = keyframes`${zoomIn}`;
 const ZoomInDiv = styled.div`
@@ -76,11 +90,10 @@ const Receipt = ({ match }) => {
       <div className='App'>
         <header className='Success-header'>
           <lottie-player
-            src='https://assets9.lottiefiles.com/packages/lf20_LfkCsp.json'
-            direction='2'
+            src='https://assets3.lottiefiles.com/packages/lf20_LfkCsp.json'
+            mode='bounce'
             background='transparent'
             speed='1'
-            style={{ width: '300px', height: '300px' }}
             loop
             autoplay
           />
@@ -96,8 +109,7 @@ const Receipt = ({ match }) => {
             background='transparent'
             speed='1'
             style={{ width: '600px', height: '600px' }}
-            // loop
-            // controls
+            loop
             autoplay
           />
         </header>
@@ -115,30 +127,21 @@ const Receipt = ({ match }) => {
                 boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
                 padding: 0
               }}
-              // cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
             >
-              {/* <lottie-player
+              <lottie-player
                 src='https://assets1.lottiefiles.com/packages/lf20_41nvak.json'
                 background='transparent'
-                speed='5'
-                style={{ display: 'flex' }}
+                speed='3'
+                className='displayFlex'
                 loop
                 autoplay
-              /> */}
-              {/* <lottie-player
-                src='https://assets10.lottiefiles.com/packages/lf20_7W0ppe.json'
-                background='transparent'
-                speed='1'
-                // style={{ width: '300px', height: '300px' }}
-                loop
-                autoplay
-              /> */}
+              />
 
-              <div style={{ display: 'flex' }}>
+              <div className='displayFlex'>
                 <lottie-player
                   src='https://assets1.lottiefiles.com/packages/lf20_I9GBQj.json'
                   speed='1'
-                  style={{ position: 'absolute', zIndex: 5, width: '100%' }}
+                  style={{ position: 'relative', zIndex: 5, width: '100%' }}
                   loop
                   autoplay
                 />
@@ -151,52 +154,8 @@ const Receipt = ({ match }) => {
                   loop
                   autoplay
                 />
-                {verifiedToken.flatNo ? (
-                  <p
-                    style={{
-                      top: 0,
-                      left: 0,
-                      zIndex: 7,
-                      position: 'relative'
-                    }}
-                  >
-                    ID: {verifiedToken.flatNo}
-                  </p>
-                ) : (
-                  <p
-                    style={{
-                      top: 0,
-                      left: 0,
-                      zIndex: 7,
-                      position: 'relative'
-                    }}
-                  >
-                    Well-Wisher
-                  </p>
-                )}
-                {verifiedToken.timestamp && (
-                  <p
-                    style={{
-                      top: 0,
-                      right: 0,
-                      zIndex: 7,
-                      position: 'absolute'
-                    }}
-                  >
-                    Date:
-                    {new Date(verifiedToken.timestamp.seconds * 1000).getDate()}
-                    /
-                    {new Date(
-                      verifiedToken.timestamp.seconds * 1000
-                    ).getMonth() + 1}
-                    /
-                    {new Date(
-                      verifiedToken.timestamp.seconds * 1000
-                    ).getFullYear()}
-                  </p>
-                )}
               </div>
-              <div style={{ display: 'flex' }}>
+              <div className='displayFlex marginTop10'>
                 <lottie-player
                   src='https://assets5.lottiefiles.com/packages/lf20_TgAHwk.json'
                   speed='1'
@@ -204,35 +163,78 @@ const Receipt = ({ match }) => {
                   loop
                   autoplay
                 />
-                <div
-                  style={{
-                    position: 'absolute',
-                    zIndex: 6,
-                    bottom: 1,
-                    left: 0,
-                    right: 0,
-                    margin: 'auto'
-                  }}
-                >
-                  {/* <p>{JSON.stringify(verifiedToken)}</p> */}
+                <div className='dataReceipt'>
+                  {verifiedToken.timestamp && (
+                    <>
+                      <div className='justifyRowBetween'>
+                        <p className='titles'>Date</p>
+
+                        <p className='titles'>Time</p>
+                      </div>
+                      <div className='justifyRowBetween'>
+                        <h3
+                          style={{
+                            fontWeight: 'bolder',
+                            justifySelf: 'flex-start'
+                          }}
+                        >
+                          {new Date(
+                            verifiedToken.timestamp.seconds * 1000
+                          ).getDate()}{' '}
+                          {
+                            month[
+                              new Date(
+                                verifiedToken.timestamp.seconds * 1000
+                              ).getMonth()
+                            ]
+                          }
+                          ,{' '}
+                          {new Date(
+                            verifiedToken.timestamp.seconds * 1000
+                          ).getFullYear()}
+                        </h3>
+                        <h3 className='bolderFonts'>
+                          {new Date(
+                            verifiedToken.timestamp.seconds * 1000
+                          ).getHours()}
+                          :
+                          {new Date(
+                            verifiedToken.timestamp.seconds * 1000
+                          ).getMinutes()}
+                        </h3>
+                      </div>
+                    </>
+                  )}
                   {verifiedToken.verified && (
-                    <p>
-                      <h3 style={{ fontWeight: 'bolder', padding: 0 }}>
-                        ₹ {verifiedToken.amount}
-                      </h3>
-                      <br />
-                      was contributed by
-                      <br />
-                      <h3 style={{ fontWeight: 'bolder', padding: 0 }}>
+                    <div className='alignColumnStart'>
+                      <p className='titles'>From</p>
+                      <h3
+                        style={{
+                          fontWeight: 'bolder'
+                        }}
+                      >
                         {verifiedToken.received}
                       </h3>
-                      <br />
-                      and was collected by
-                      <br></br>
-                      <h3 style={{ fontWeight: 'bolder', padding: 0 }}>
-                        {verifiedToken.collected}
-                      </h3>
-                    </p>
+                      <p className='titles'>Amount</p>
+
+                      <div className='justifyRowBetween width100'>
+                        <h2 className='bolderFonts'>₹{verifiedToken.amount}</h2>
+                        <Popover
+                          content={
+                            <p>
+                              The verification is done using Hash-based Message
+                              Authentication(HMAC) and SHA-256. In that way no
+                              one can duplicate receipt made by JMM.
+                            </p>
+                          }
+                          title='Verified'
+                        >
+                          <Button className='verifiedButton' shape='round'>
+                            verified
+                          </Button>
+                        </Popover>
+                      </div>
+                    </div>
                   )}
                 </div>
               </div>

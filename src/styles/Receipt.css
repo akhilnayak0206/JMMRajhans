@@ -9,6 +9,20 @@
   font-size: calc(10px + 2vmin);
 }
 
-p {
-  font-family: 'Brush Script MT', cursive;
+.titles {
+  color: grey;
+  margin-bottom: 0px;
+}
+
+.dataReceipt {
+  position: absolute;
+  z-index: 6;
+  bottom: 1px;
+  left: 10px;
+  right: 10px;
+}
+
+.verifiedButton {
+  background-color: #00ff99;
+  color: white;
 }

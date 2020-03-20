@@ -7,3 +7,57 @@
 .JMM-logo {
   height: 20vmin;
 }
+
+.displayFlex {
+  display: flex;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+.justifyRowBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bolderFonts {
+  font-weight: bolder;
+}
+
+.alignColumnStart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.successColor {
+  color: #00ff99;
+}
+
+.width100 {
+  width: 100%;
+}
+
+p {
+  font-family: 'Lucida Bright', Georgia, serif;
+}
+
+h3 {
+  /* font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia,
+    serif; */
+  font-family: 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style',
+    Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+
+  /* font-family: Georgia, Times, 'Times New Roman', serif; */
+}
+
+h2 {
+  /* font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia,
+    serif; */
+  font-family: 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style',
+    Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+
+  /* font-family: Georgia, Times, 'Times New Roman', serif; */
+}
