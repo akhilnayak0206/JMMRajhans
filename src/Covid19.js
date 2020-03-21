@@ -114,18 +114,17 @@ const Covid19 = () => {
               <br />
               The idea is to stay at home and explore your creativity. This
               competition is to show our support towards our nation and to all
-              the doctors and hospital staff who are constantly working to
-              ensure that Indians stay safe. To add to the excitement, we'll be
-              giving{' '}
+              who are constantly working to ensure that Indians stay safe. To
+              add to the excitement, we'll be giving{' '}
               <bold style={{ fontWeight: 'bolder' }}>
                 certificates to children for participation
               </bold>{' '}
-              and the best entries will be shared on social media as well. We
-              expect to see a healthy participation from all the residents.{' '}
-              <br />
+              and the best entries will be shared on social media and our
+              website. We expect to see a healthy participation from all the
+              residents. <br />
               <br />
               <p style={{ fontWeight: 'bolder' }}>
-                End date: 23rd March 2020 9 AM.
+                End date: 23rd March 2020 9 PM.
               </p>
             </p>
             <br />
@@ -163,12 +162,22 @@ const Covid19 = () => {
               label='File'
               rules={[{ required: true }]}
             >
-              <Upload {...props}>
-                <Button type='ghost' style={{ backgroundColor: '#00ff99' }}>
-                  <p>Select File</p>
-                </Button>
-                {info && <p>File selected</p>}
-              </Upload>
+              {info ? (
+                <>
+                  <Upload {...props}>
+                    <Button type='ghost' style={{ backgroundColor: '#00ff99' }}>
+                      <p>Select File</p>
+                    </Button>
+                    <p>File selected: {JSON.stringify(info.file.name)}</p>
+                  </Upload>
+                </>
+              ) : (
+                <Upload {...props}>
+                  <Button type='ghost'>
+                    <p>Select File</p>
+                  </Button>
+                </Upload>
+              )}
             </Form.Item>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
               <Button
