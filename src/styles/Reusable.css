@@ -45,19 +45,10 @@ p {
 }
 
 h3 {
-  /* font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia,
-    serif; */
   font-family: 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style',
     Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
-
-  /* font-family: Georgia, Times, 'Times New Roman', serif; */
 }
 
 h2 {
-  /* font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia,
-    serif; */
-  font-family: 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style',
-    Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
-
-  /* font-family: Georgia, Times, 'Times New Roman', serif; */
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
 }

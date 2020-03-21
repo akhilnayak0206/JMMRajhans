@@ -122,7 +122,7 @@ const Receipt = ({ match }) => {
           <ZoomInDiv>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ width: 300 }}
               bodyStyle={{
                 boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
                 padding: 0
@@ -141,7 +141,7 @@ const Receipt = ({ match }) => {
                 <lottie-player
                   src='https://assets1.lottiefiles.com/packages/lf20_I9GBQj.json'
                   speed='1'
-                  style={{ position: 'relative', zIndex: 5, width: '100%' }}
+                  style={{ position: 'absolute', zIndex: 6, width: '100%' }}
                   loop
                   autoplay
                 />
@@ -150,7 +150,7 @@ const Receipt = ({ match }) => {
                   src='https://assets10.lottiefiles.com/packages/lf20_7W0ppe.json'
                   background='transparent'
                   speed='1'
-                  style={{ position: 'absolute', zIndex: 6 }}
+                  style={{ position: 'absolute', zIndex: 7 }}
                   loop
                   autoplay
                 />
