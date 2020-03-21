@@ -4,6 +4,12 @@
   text-align: center;
 }
 
+.FullScreen {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
 .JMM-logo {
   height: 20vmin;
 }

@@ -3,15 +3,17 @@ import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
 import Home from './Home';
 import ComingSoon from './ComingSoon';
 import Receipt from './Receipt';
+import Covid19 from './Covid19';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/comingsoon' component={ComingSoon} />
+        <Route exact path='/fight-covid19' component={Covid19} />
+        {/* <Route path='/comingsoon' component={ComingSoon} /> */}
         <Route exact path='/home' component={Home} />
         <Route path='/receipt/:token' component={Receipt} />
-        <Redirect to='/comingsoon' />
+        <Redirect to='/fight-covid19' />
       </Switch>
     </BrowserRouter>
   );
