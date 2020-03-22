@@ -172,9 +172,8 @@ const Receipt = ({ match }) => {
                         <p className='titles'>Time</p>
                       </div>
                       <div className='justifyRowBetween'>
-                        <h3
+                        <h4
                           style={{
-                            fontWeight: 'bolder',
                             justifySelf: 'flex-start'
                           }}
                         >
@@ -192,8 +191,8 @@ const Receipt = ({ match }) => {
                           {new Date(
                             verifiedToken.timestamp.seconds * 1000
                           ).getFullYear()}
-                        </h3>
-                        <h3 className='bolderFonts'>
+                        </h4>
+                        <h4 className='bolderFonts'>
                           {new Date(
                             verifiedToken.timestamp.seconds * 1000
                           ).getHours()}
@@ -201,20 +200,14 @@ const Receipt = ({ match }) => {
                           {new Date(
                             verifiedToken.timestamp.seconds * 1000
                           ).getMinutes()}
-                        </h3>
+                        </h4>
                       </div>
                     </>
                   )}
                   {verifiedToken.verified && (
                     <div className='alignColumnStart'>
                       <p className='titles'>From</p>
-                      <h3
-                        style={{
-                          fontWeight: 'bolder'
-                        }}
-                      >
-                        {verifiedToken.received}
-                      </h3>
+                      <h4>{verifiedToken.received}</h4>
                       <p className='titles'>Amount</p>
 
                       <div className='justifyRowBetween width100'>

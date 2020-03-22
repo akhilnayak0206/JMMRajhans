@@ -31,7 +31,14 @@ const Home = () => {
         className='FullScreen justifyAlignCenter'
         style={{ flexDirection: 'column' }}
       >
-        <h3>Contact Us:</h3>
+        <lottie-player
+          src='https://assets7.lottiefiles.com/packages/lf20_HxqVQ4.json'
+          background='transparent'
+          speed='1'
+          style={{ width: '300px', height: '150px' }}
+          loop
+          autoplay
+        />
         {/* <ZoomInDiv>
             <img
               src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584280791/Dashboard%20Online/JMMLogoTransparent.png'
