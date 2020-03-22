@@ -4,6 +4,7 @@ import Home from './Home';
 import ComingSoon from './ComingSoon';
 import Receipt from './Receipt';
 import Covid19 from './Covid19';
+import ContactUs from './ContactUs';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route exact path='/fight-covid19' component={Covid19} />
         {/* <Route path='/comingsoon' component={ComingSoon} /> */}
         <Route exact path='/home' component={Home} />
+        <Route exact path='/contactus' component={ContactUs} />
         <Route path='/receipt/:token' component={Receipt} />
         <Redirect to='/fight-covid19' />
       </Switch>

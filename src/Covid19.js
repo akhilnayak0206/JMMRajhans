@@ -56,24 +56,32 @@ const Covid19 = () => {
   const onFinish = values => {
     setSubmitLoading(true);
     console.log(values);
-    listRef
-      .child(`${values.user.name}-${values.user.email}-${values.user.flat}`)
-      .put(info.file)
-      .then(function(snapshot) {
-        setSubmitLoading(false);
-        notification['success']({
-          message: 'Successful',
-          description: 'You have successfully entered the competition.'
+    if (info) {
+      listRef
+        .child(`${values.user.name}-${values.user.email}-${values.user.flat}`)
+        .put(info.file)
+        .then(function(snapshot) {
+          setSubmitLoading(false);
+          notification['success']({
+            message: 'Successful',
+            description: 'You have successfully entered the competition.'
+          });
+        })
+        .catch(function(error) {
+          setSubmitLoading(false);
+          console.log(error);
+          notification['error']({
+            message: 'Error',
+            description: 'Please upload again.'
+          });
         });
-      })
-      .catch(function(error) {
-        setSubmitLoading(false);
-        console.log(error);
-        notification['error']({
-          message: 'Error',
-          description: 'Please upload again.'
-        });
+    } else {
+      setSubmitLoading(false);
+      notification['error']({
+        message: 'Error',
+        description: 'Please upload file.'
       });
+    }
   };
   const layout = {
     labelCol: { span: 8 },
@@ -157,11 +165,7 @@ const Covid19 = () => {
             >
               <InputNumber />
             </Form.Item>
-            <Form.Item
-              name={['user', 'file']}
-              label='File'
-              rules={[{ required: true }]}
-            >
+            <Form.Item name={['user', 'file']} label='File'>
               {info ? (
                 <>
                   <Upload {...props}>
