@@ -81,7 +81,7 @@ const allImages = [
     name: 'Parshva Doshi',
     flat: '313',
     src:
-      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584975852/Covid19JMM/Parshva_Doshi-Parshvadoshi9_gmail.com-313.jpg'
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584980090/Covid19JMM/Parshva_Doshi_-Parshvadoshi9_gmail.com-313.jpg'
   },
   {
     name: 'Sameer Dalvi',
