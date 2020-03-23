@@ -20,6 +20,13 @@
   height: 20vmin;
 }
 
+.stickyHeader {
+  width: 100%;
+  position: sticky;
+  z-index: 150;
+  top: 0px;
+}
+
 .displayFlex {
   display: flex;
 }

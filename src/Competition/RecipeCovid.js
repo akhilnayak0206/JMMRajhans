@@ -10,18 +10,11 @@ import {
   InputNumber,
   Button
 } from 'antd';
-// import styled, { keyframes } from 'styled-components';
-// import { zoomIn } from 'react-animations';
 import Header from '../Reusable Components/Header';
 import '../styles/Home.css';
 import NewCarousel from '../Reusable Components/NewCarousel';
 import firebase from '../config/fbConfig';
 import allImages from '../Images';
-
-// const ZoomInAnimation = keyframes`${zoomIn}`;
-// const ZoomInDiv = styled.div`
-//   animation: 5s ${ZoomInAnimation};
-// `;
 
 const validateMessages = {
   required: 'This field is required!',
@@ -89,41 +82,38 @@ const RecipeCovid = () => {
     wrapperCol: { span: 16 }
   };
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Header />
-      <div style={{ marginTop: '60px', display: 'flex' }}>
-        <NewCarousel allImages={allImages} />
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <div>
-          <h2>NAV-RAJHANS DRAWING COMPETITION</h2>
-          <p>
-            During this time where everyone is advised to stay at home, we are
-            excited to announce a drawing/painting competition for children and
-            adults. <br />
-            <br />
-            <bold style={{ fontWeight: 'bolder' }}>
-              Topic: How I fight COVID-19 virus.
-            </bold>
-            <br />
-            <br />
-            The idea is to stay at home and explore your creativity. This
-            competition is to show our support towards our nation and to all who
-            are constantly working to ensure that Indians stay safe. To add to
-            the excitement, we'll be giving{' '}
-            <bold style={{ fontWeight: 'bolder' }}>
-              certificates to children for participation
-            </bold>{' '}
-            and the best entries will be shared on social media and our website.
-            We expect to see a healthy participation from all the residents.{' '}
-            <br />
-            <br />
-            <p style={{ fontWeight: 'bolder' }}>
-              End date: 24th March 2020 9 PM.
-            </p>
-          </p>
+      <NewCarousel allImages={allImages} />
+      <div style={{ padding: '20px' }}>
+        <h3 className='bolderFonts'>NAV-RAJHANS Recipe COMPETITION</h3>
+        <p>
+          During this time where everyone is advised to stay at home, we are
+          excited to announce a drawing/painting competition for children and
+          adults. <br />
           <br />
-        </div>
+          <bold style={{ fontWeight: 'bolder' }}>
+            Topic: How I fight COVID-19 virus.
+          </bold>
+          <br />
+          <br />
+          The idea is to stay at home and explore your creativity. This
+          competition is to show our support towards our nation and to all who
+          are constantly working to ensure that Indians stay safe. To add to the
+          excitement, we'll be giving{' '}
+          <bold style={{ fontWeight: 'bolder' }}>
+            certificates to children for participation
+          </bold>{' '}
+          and the best entries will be shared on social media and our website.
+          We expect to see a healthy participation from all the residents.{' '}
+          <br />
+          <br />
+          <p style={{ fontWeight: 'bolder' }}>
+            End date: 24th March 2020 9 PM.
+          </p>
+        </p>
+        <br />
+
         <h2>Submit your Painting/Drawing:</h2>
         <Form
           {...layout}
@@ -183,25 +173,8 @@ const RecipeCovid = () => {
           </Form.Item>
         </Form>
       </div>
-    </>
+    </div>
   );
 };
 
 export default RecipeCovid;
-
-// Under construction
-
-{
-  /* <div className='App'>
-      <header className='JMM-header'>
-        <ZoomInDiv>
-          <img
-            src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584280791/Dashboard%20Online/JMMLogoTransparent.png'
-            className='JMM-logo'
-            alt='logo'
-          />
-        </ZoomInDiv>
-        <p>Jai Mitra Mandal's Home Page will be loaded soon.</p>
-      </header>
-    </div> */
-}

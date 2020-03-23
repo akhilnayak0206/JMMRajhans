@@ -19,7 +19,7 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color='light' light expand='md' fixed='top'>
+    <Navbar color='light' light expand='md' className='stickyHeader'>
       <NavbarBrand href='/'>
         <img
           src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584280791/Dashboard%20Online/JMMLogoTransparent.png'
