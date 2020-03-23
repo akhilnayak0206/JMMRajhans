@@ -19,7 +19,7 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color='light' light expand='md'>
+    <Navbar color='light' light expand='md' fixed='top'>
       <NavbarBrand href='/'>
         <img
           src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584280791/Dashboard%20Online/JMMLogoTransparent.png'
@@ -45,16 +45,16 @@ const Header = () => {
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
-          <UncontrolledDropdown nav inNavbar>
+          {/* <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               Past Competition
             </DropdownToggle>
             <DropdownMenu right>
-              {/* <DropdownItem> */}
-              {/* <NavLink href='/receipt/zc'>Fight Covid-19</NavLink> */}
-              {/* </DropdownItem> */}
+              <DropdownItem>
+              <NavLink href='/fight-covid19'>Fight Covid-19</NavLink>
+              </DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </UncontrolledDropdown> */}
           <NavItem>
             <NavLink href='/receipt/zc'>About</NavLink>
           </NavItem>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { notification, Card, Button, Popover } from 'antd';
 import styled, { keyframes } from 'styled-components';
 import { zoomIn } from 'react-animations';
+import Header from './Reusable Components/Header';
 import './styles/Receipt.css';
 
 const month = [];
@@ -87,17 +88,16 @@ const Receipt = ({ match }) => {
   };
   if (receiptAnimation) {
     return (
-      <div className='App'>
-        <header className='Success-header'>
-          <lottie-player
-            src='https://assets3.lottiefiles.com/packages/lf20_LfkCsp.json'
-            mode='bounce'
-            background='transparent'
-            speed='1'
-            loop
-            autoplay
-          />
-        </header>
+      <div className='Success-header'>
+        <lottie-player
+          src='https://assets3.lottiefiles.com/packages/lf20_LfkCsp.json'
+          mode='bounce'
+          background='transparent'
+          style={{ textAlign: 'center' }}
+          speed='1'
+          loop
+          autoplay
+        />
       </div>
     );
   } else if (successful) {
@@ -117,7 +117,8 @@ const Receipt = ({ match }) => {
     );
   } else if (showReceipt) {
     return (
-      <div className='App'>
+      <>
+        <Header />
         <header className='Success-header'>
           <ZoomInDiv>
             <Card
@@ -132,51 +133,62 @@ const Receipt = ({ match }) => {
                 src='https://assets1.lottiefiles.com/packages/lf20_41nvak.json'
                 background='transparent'
                 speed='3'
-                className='displayFlex'
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  width: '100%'
+                }}
                 loop
                 autoplay
               />
-
               <div className='displayFlex'>
                 <lottie-player
                   src='https://assets1.lottiefiles.com/packages/lf20_I9GBQj.json'
                   speed='1'
-                  style={{ position: 'absolute', zIndex: 6, width: '100%' }}
+                  style={{
+                    position: 'absolute',
+                    zIndex: 6,
+                    width: '300px',
+                    height: '300px'
+                  }}
                   loop
                   autoplay
                 />
-
                 <lottie-player
                   src='https://assets10.lottiefiles.com/packages/lf20_7W0ppe.json'
                   background='transparent'
                   speed='1'
-                  style={{ position: 'absolute', zIndex: 7 }}
+                  style={{
+                    position: 'absolute',
+                    zIndex: 7,
+                    width: '300px',
+                    height: '300px'
+                  }}
                   loop
                   autoplay
                 />
               </div>
-              <div className='displayFlex marginTop10'>
+              <div className='displayFlex marginTop20'>
                 <lottie-player
                   src='https://assets5.lottiefiles.com/packages/lf20_TgAHwk.json'
                   speed='1'
-                  style={{ position: 'relative', zIndex: 5, width: '100%' }}
+                  style={{
+                    position: 'relative',
+                    zIndex: 5,
+                    display: 'flex'
+                  }}
                   loop
                   autoplay
                 />
-                <div className='dataReceipt'>
+                {/* <div className='dataReceipt'>
                   {verifiedToken.timestamp && (
                     <>
                       <div className='justifyRowBetween'>
                         <p className='titles'>Date</p>
-
                         <p className='titles'>Time</p>
                       </div>
                       <div className='justifyRowBetween'>
-                        <h4
-                          style={{
-                            justifySelf: 'flex-start'
-                          }}
-                        >
+                        <h4>
                           {new Date(
                             verifiedToken.timestamp.seconds * 1000
                           ).getDate()}{' '}
@@ -192,7 +204,7 @@ const Receipt = ({ match }) => {
                             verifiedToken.timestamp.seconds * 1000
                           ).getFullYear()}
                         </h4>
-                        <h4 className='bolderFonts'>
+                        <h4>
                           {new Date(
                             verifiedToken.timestamp.seconds * 1000
                           ).getHours()}
@@ -207,7 +219,13 @@ const Receipt = ({ match }) => {
                   {verifiedToken.verified && (
                     <div className='alignColumnStart'>
                       <p className='titles'>From</p>
-                      <h4>{verifiedToken.received}</h4>
+                      <h4
+                        style={{
+                          fontWeight: 'bolder'
+                        }}
+                      >
+                        {verifiedToken.received}
+                      </h4>
                       <p className='titles'>Amount</p>
 
                       <div className='justifyRowBetween width100'>
@@ -229,12 +247,12 @@ const Receipt = ({ match }) => {
                       </div>
                     </div>
                   )}
-                </div>
+                </div> */}
               </div>
             </Card>
           </ZoomInDiv>
         </header>
-      </div>
+      </>
     );
   } else {
     return (

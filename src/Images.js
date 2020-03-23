@@ -14,6 +14,30 @@ const allImages = [
   {
     src:
       'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584885918/Covid19JMM/35.jpg'
+  },
+  {
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584965157/Covid19JMM/36.jpg'
+  },
+  {
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584885918/Covid19JMM/37.jpg'
+  },
+  {
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584885918/Covid19JMM/38.jpg'
+  },
+  {
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584885918/Covid19JMM/39.jpg'
+  },
+  {
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584903585/Covid19JMM/310.jpg'
+  },
+  {
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584903596/Covid19JMM/311.jpg'
   }
 ];
 

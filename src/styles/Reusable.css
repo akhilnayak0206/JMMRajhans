@@ -28,6 +28,10 @@
   margin-top: 10px;
 }
 
+.marginTop20 {
+  margin-top: 20px;
+}
+
 .justifyRowBetween {
   display: flex;
   flex-direction: row;
