@@ -17,11 +17,6 @@ import { Carousel } from 'react-responsive-carousel';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-// const ZoomInAnimation = keyframes`${zoomIn}`;
-// const ZoomInDiv = styled.div`
-//   animation: 5s ${ZoomInAnimation};
-// `;
-
 const validateMessages = {
   required: 'This field is required!',
   types: {
@@ -104,6 +99,12 @@ const Covid19 = () => {
           allImages.map((val, key) => (
             <div key={key}>
               <img src={val.src} />
+              <h4
+                className='legend'
+                style={{ backgroundColor: 'rgba(0,0,0,0.2)' }}
+              >
+                {val.name}
+              </h4>
             </div>
           ))}
       </Carousel>
@@ -132,7 +133,7 @@ const Covid19 = () => {
             <br />
             <br />
             <p style={{ fontWeight: 'bolder' }}>
-              End date: 23rd March 2020 9 PM.
+              End date: 24th March 2020 9 PM.
             </p>
           </p>
           <br />
