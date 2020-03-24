@@ -112,6 +112,12 @@ const allImages = [
     flat: '112',
     src:
       'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585059652/Covid19JMM/Krisha_shah-amitshah7188_gmail.com-112.jpg'
+  },
+  {
+    name: 'Cherry Shah',
+    flat: '109',
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585064287/Covid19JMM/Cherry_Shah-ritagalia1997_yahoo.co.in-109.jpg'
   }
 ];
 
