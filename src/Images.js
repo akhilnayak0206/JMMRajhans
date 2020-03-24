@@ -88,6 +88,30 @@ const allImages = [
     flat: '1',
     src:
       'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584976718/Covid19JMM/Sameer_Dalvi-bridgecom_hotmail.com-1.jpg'
+  },
+  {
+    name: 'Mehul Joshi',
+    flat: '405',
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585051044/Covid19JMM/Mehul_Joshi_-mehuljoshi007_yahoo.com-405.jpg'
+  },
+  {
+    name: 'Hetarth Shah',
+    flat: '112',
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585051028/Covid19JMM/Hetarth_shah-amitshah7188_gmail.com-112.jpg'
+  },
+  {
+    name: 'Mitesh Panchal',
+    flat: '314',
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585059651/Covid19JMM/Mitesh_Panchal-4miteshpanchal_gmail.com-314.jpg'
+  },
+  {
+    name: 'Krisha Shah',
+    flat: '112',
+    src:
+      'https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585059652/Covid19JMM/Krisha_shah-amitshah7188_gmail.com-112.jpg'
   }
 ];
 
