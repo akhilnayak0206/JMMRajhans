@@ -3,8 +3,7 @@ import {
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
+  CarouselIndicators
 } from 'reactstrap';
 import '../styles/NewCarousel.css';
 
@@ -43,12 +42,9 @@ const NewCarousel = props => {
           alt={item.name}
           className='d-block w-100 imgCarousel'
         />
-
-        <div className='carousel-caption'>
-          <h3 style={{ color: 'white' }}>{item.name}</h3>
-          <p>{item.flat}</p>
-        </div>
-        {/* <CarouselCaption captionText={item.flat} captionHeader={item.name} /> */}
+        <p className='carousel-caption' style={{ color: 'white' }}>
+          {item.name}({item.flat})
+        </p>
       </CarouselItem>
     );
   });

@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import { DropdownItem } from 'reactstrap';
-import {
-  Layout,
-  Upload,
-  message,
-  notification,
-  Form,
-  Input,
-  InputNumber,
-  Button
-} from 'antd';
+import { Upload, notification, Form, Input, InputNumber, Button } from 'antd';
 import Header from '../Reusable Components/Header';
 import '../styles/Home.css';
 import NewCarousel from '../Reusable Components/NewCarousel';
@@ -23,6 +13,7 @@ const validateMessages = {
     number: 'Not a validate number!'
   },
   number: {
+    // eslint-disable-next-line
     range: 'Must be between ${min} and ${max}'
   }
 };

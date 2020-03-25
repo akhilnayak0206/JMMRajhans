@@ -93,7 +93,7 @@ const Receipt = ({ match }) => {
           src='https://assets3.lottiefiles.com/packages/lf20_LfkCsp.json'
           mode='bounce'
           background='transparent'
-          style={{ textAlign: 'center' }}
+          className='FullScreen justifyAlignCenter'
           speed='1'
           loop
           autoplay
@@ -136,7 +136,8 @@ const Receipt = ({ match }) => {
                 style={{
                   position: 'absolute',
                   top: 0,
-                  width: '100%'
+                  width: '100%',
+                  zIndex: 8
                 }}
                 loop
                 autoplay
@@ -180,7 +181,7 @@ const Receipt = ({ match }) => {
                   loop
                   autoplay
                 />
-                {/* <div className='dataReceipt'>
+                <div className='dataReceipt'>
                   {verifiedToken.timestamp && (
                     <>
                       <div className='justifyRowBetween'>
@@ -247,7 +248,7 @@ const Receipt = ({ match }) => {
                       </div>
                     </div>
                   )}
-                </div> */}
+                </div>
               </div>
             </Card>
           </ZoomInDiv>

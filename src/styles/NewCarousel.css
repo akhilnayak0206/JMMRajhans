@@ -9,7 +9,14 @@
 }
 
 .imgCarousel {
-  height: 65vh;
   object-fit: contain;
   background-color: black;
+}
+
+@media only screen and (min-width: 769px) {
+  .imgCarousel {
+    height: 65vh;
+    object-fit: contain;
+    background-color: black;
+  }
 }

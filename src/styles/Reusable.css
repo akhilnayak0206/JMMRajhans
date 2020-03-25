@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.column {
+  flex-direction: column;
+}
+
 .justifyAlignCenter {
   justify-content: center;
   align-items: center;
