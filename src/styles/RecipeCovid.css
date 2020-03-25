@@ -1,9 +1,1 @@
 @import './Reusable.css';
-
-.stickyHeader {
-  display: flex;
-  width: 100%;
-  position: sticky !important;
-  z-index: 15;
-  top: 0px;
-}

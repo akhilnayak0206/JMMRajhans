@@ -6,6 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import '../styles/NewCarousel.css';
 
 const NewCarousel = props => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -37,13 +38,17 @@ const NewCarousel = props => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.name} />
-
-        <CarouselCaption
-          cssModule={{ backgroundColor: 'rgba(0,0,0,0.2)' }}
-          captionText={item.flat}
-          captionHeader={item.name}
+        <img
+          src={item.src}
+          alt={item.name}
+          className='d-block w-100 imgCarousel'
         />
+
+        <div className='carousel-caption'>
+          <h3 style={{ color: 'white' }}>{item.name}</h3>
+          <p>{item.flat}</p>
+        </div>
+        {/* <CarouselCaption captionText={item.flat} captionHeader={item.name} /> */}
       </CarouselItem>
     );
   });

@@ -35,29 +35,29 @@ const Header = () => {
           <NavItem>
             <NavLink href='/home'>Home</NavLink>
           </NavItem>
-          <UncontrolledDropdown nav inNavbar>
+          {/* <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
-              Ongoing Competition
+              Ongoing/ Upcoming Competition
             </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem>
                 <NavLink href='/fight-covid19'>Fight Covid-19</NavLink>
               </DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
-          {/* <UncontrolledDropdown nav inNavbar>
+          </UncontrolledDropdown> */}
+          <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               Past Competition
             </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem>
-              <NavLink href='/fight-covid19'>Fight Covid-19</NavLink>
+                <NavLink href='/fight-covid19'>Fight Covid-19 Drawing</NavLink>
               </DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown> */}
-          <NavItem>
+          </UncontrolledDropdown>
+          {/* <NavItem>
             <NavLink href='/receipt/zc'>About</NavLink>
-          </NavItem>
+          </NavItem> */}
           <NavItem>
             <NavLink href='/contactus'>Contact Us</NavLink>
           </NavItem>

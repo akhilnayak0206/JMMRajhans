@@ -1,0 +1,15 @@
+@import './Reusable.css';
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.carousel-inner > .item > img {
+  margin: auto;
+}
+
+.imgCarousel {
+  height: 65vh;
+  object-fit: contain;
+  background-color: black;
+}
