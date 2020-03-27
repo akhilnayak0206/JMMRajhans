@@ -7,7 +7,7 @@ import '../styles/RecipeCovid.css';
 const { Meta } = Card;
 
 const RecipeCovid = () => {
-  const [mapping, setMapping] = useState([1, 2, 3, 4, 5, 6]);
+  const [mapping, setMapping] = useState([1, 2, 3, 4, 5, 6]); // eslint-disable-line no-unused-vars
 
   return (
     <div className='displayFlex column'>
@@ -31,9 +31,8 @@ const RecipeCovid = () => {
           will be shared on social media and our website. We expect to see a
           healthy participation from all the residents. <br />
           <br />
-          <p style={{ fontWeight: 'bolder' }}>End date: 4th April 2020 9 PM.</p>
+          <b>End date: 4th April 2020 9 PM.</b>
         </p>
-        <br />
       </div>
       <div
         style={{
@@ -51,7 +50,7 @@ const RecipeCovid = () => {
               key={key}
               title={'Title'}
               hoverable
-              style={{ width: 240, margin: '10px' }}
+              style={{ width: 300, margin: '10px', borderRadius: 5, boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)'  }}
               actions={[
                 <Button
                   type='primary'
@@ -70,20 +69,14 @@ const RecipeCovid = () => {
               ]}
               cover={
                 <img
-                  alt='example'
+                  alt='Food'
                   src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584885921/Covid19JMM/32.jpg'
                 />
               }
             >
-              <Meta
-                title='Europe Street beat'
-                description={`The idea is to stay at home and explore your creativity. This
-          competition is to show our support towards our nation and to all who
-          are constantly working to ensure that Indians stay safe. To add to the
-          excitement, we'll be giving
-          certificates to children for participation and the best entries
-          will be shared on social media and our website. We expect to see a
-          healthy participation from all the residents.`}
+              <Meta 
+              // title='Europe Street beat' 
+              description={`Description should not be bigger than this. Make description smaller or bigger?`}
               />
             </Card>
           ))}
