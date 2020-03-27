@@ -1,0 +1,7 @@
+@import './Reusable.css';
+
+.heroImage {
+  background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585291179/pics/icons8-team-seDjj4dmC9s-unsplash.jpg');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+}

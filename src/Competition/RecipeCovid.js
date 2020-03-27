@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Upload, notification, Form, Input, InputNumber, Button } from 'antd';
 import Header from '../Reusable Components/Header';
+import NewJumbotron from '../Reusable Components/JumbotronRecipe';
 import '../styles/Home.css';
-import NewCarousel from '../Reusable Components/NewCarousel';
+// import NewCarousel from '../Reusable Components/NewCarousel';
 import firebase from '../config/fbConfig';
-import allImages from '../Images';
+// import allImages from '../Images';
 
 const validateMessages = {
   required: 'This field is required!',
@@ -73,11 +74,11 @@ const RecipeCovid = () => {
     wrapperCol: { span: 16 }
   };
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div className='displayFlex column'>
       <Header />
-      <NewCarousel allImages={allImages} />
-      <div style={{ padding: '20px' }}>
-        <h3 className='bolderFonts'>NAV-RAJHANS Recipe COMPETITION</h3>
+      <NewJumbotron />
+      <div style={{ padding: '20px', paddingTop: '0px' }}>
+        <h3 className='bolderFonts'>NAV-RAJHANS Recipe Competition</h3>
         <p>
           During this time where everyone is advised to stay at home, we are
           excited to announce a drawing/painting competition for children and
