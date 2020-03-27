@@ -5,6 +5,7 @@ import '../styles/JumbotronRecipe.css';
 
 const JumbotronRecipe = props => {
   const [learnMore, setLearnMore] = useState(false);
+  const [submitRecipe, setSubmitRecipe] = useState(false);
 
   return (
     <>
@@ -15,7 +16,16 @@ const JumbotronRecipe = props => {
         confirmLoading={!learnMore}
         onCancel={() => setLearnMore(false)}
       >
-        <p>hello</p>
+        <p>Learn more</p>
+      </Modal>
+      <Modal
+        title='Learn More'
+        visible={submitRecipe}
+        onOk={() => setSubmitRecipe(false)}
+        confirmLoading={!submitRecipe}
+        onCancel={() => setSubmitRecipe(false)}
+      >
+        <p>Submit Recipe</p>
       </Modal>
       <Jumbotron fluid className='heroImage'>
         <Container fluid>
@@ -27,7 +37,11 @@ const JumbotronRecipe = props => {
             <Button color='primary' onClick={() => setLearnMore(true)}>
               Learn More
             </Button>
-            <Button color='primary' className='marginLeft10'>
+            <Button
+              color='primary'
+              className='marginLeft10'
+              onClick={() => setSubmitRecipe(true)}
+            >
               Submit Recipe
             </Button>
           </p>
