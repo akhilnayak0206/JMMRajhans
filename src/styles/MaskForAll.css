@@ -1,0 +1,51 @@
+@import './Reusable.css';
+
+.heroImage {
+  background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585399834/pics/WhatsApp_Image_2020-03-28_at_6.14.17_PM.jpg');
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  height: 60vh;
+  padding-bottom: 0%;
+}
+
+/* @media only screen and (max-width: 420px) {
+  .heroImage {
+    background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585399834/pics/WhatsApp_Image_2020-03-28_at_6.14.17_PM.jpg');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    height: 40vh;
+    padding-bottom: 0%;
+  }
+} */
+
+@media only screen and (max-width: 540px) {
+  .heroImage {
+    background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585399834/pics/WhatsApp_Image_2020-03-28_at_6.14.17_PM.jpg');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    height: 37vh;
+    padding-bottom: 0%;
+  }
+}
+
+@media only screen and (min-width: 889px) {
+  .heroImage {
+    background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585399834/pics/WhatsApp_Image_2020-03-28_at_6.14.17_PM.jpg');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    height: 80vh;
+    padding-bottom: 0%;
+  }
+}

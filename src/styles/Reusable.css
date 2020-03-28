@@ -96,3 +96,15 @@ h2 {
 .colorWhite {
   color: white;
 }
+
+.colorBlack {
+  color: black;
+}
+
+.blackOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.alignFlexEnd {
+  align-items: flex-end;
+}
