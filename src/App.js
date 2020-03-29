@@ -6,7 +6,8 @@ import Home from './Home';
 import ContactUs from './ContactUs';
 // import RecipeCovid from './Competition/RecipeCovid';
 import DrawingCovid from './Competition/DrawingCovid';
-import MaskForAll from './Competition/MaskForAll';
+// import MaskForAll from './Competition/MaskForAll';
+import EssayCovid from './Competition/EssayCovid';
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
         <Route exact path='/fight-covid19' component={DrawingCovid} />
         {/* <Route path='/comingsoon' component={ComingSoon} /> */}
         <Route exact path='/home' component={Home} />
-        <Route exact path='/maskForAll' component={MaskForAll} />
+        <Route exact path='/fight-covid19-essay' component={EssayCovid} />
+        {/* <Route exact path='/maskForAll' component={MaskForAll} /> */}
         {/* <Route exact path='/fight-covid19-recipe' component={RecipeCovid} /> */}
         <Route exact path='/contactus' component={ContactUs} />
         {/* <Route path='/receipt/:token' component={Receipt} /> */}

@@ -1,0 +1,51 @@
+@import './Reusable.css';
+
+.heroImage {
+  background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585462713/pics/writing_0.jpg');
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  height: 60vh;
+  padding-bottom: 0%;
+}
+
+@media only screen and (max-width: 390px) {
+  .heroImage {
+    background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585462713/pics/writing_0.jpg');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    height: 30vh;
+    padding-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 540px) and (min-width: 391px) {
+  .heroImage {
+    background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585462713/pics/writing_0.jpg');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    height: 37vh;
+    padding-bottom: 0%;
+  }
+}
+
+@media only screen and (min-width: 889px) {
+  .heroImage {
+    background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585462713/pics/writing_0.jpg');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    height: 80vh;
+    padding-bottom: 0%;
+  }
+}
