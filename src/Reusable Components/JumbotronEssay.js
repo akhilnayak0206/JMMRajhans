@@ -56,7 +56,8 @@ const JumbotronEssay = props => {
           email,
           flatNo,
           essay,
-          approved: false
+          approved: false,
+          timestamp: new Date(Date.now())
         })
         .then(ref => {
           setLoadingSubmit(false);
