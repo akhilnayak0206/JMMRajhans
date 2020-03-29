@@ -11,6 +11,14 @@
   padding-bottom: 0%;
 }
 
+.essayCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
 @media only screen and (max-width: 390px) {
   .heroImage {
     background-image: url('https://res.cloudinary.com/dx0wpoeyu/image/upload/v1585462713/pics/writing_0.jpg');
@@ -34,6 +42,14 @@
     background-repeat: no-repeat;
     height: 37vh;
     padding-bottom: 0%;
+  }
+  .essayCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
 }
 

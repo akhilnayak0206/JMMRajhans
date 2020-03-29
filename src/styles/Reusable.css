@@ -108,3 +108,23 @@ h2 {
 .alignFlexEnd {
   align-items: flex-end;
 }
+
+.paddingTop0 {
+  padding-top: 0px;
+}
+
+.paddingBottom0 {
+  padding-bottom: 0px;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+.paddingHorizontal20 {
+  padding: 0% 20px;
+}
+
+.margin0 {
+  margin: 0px;
+}

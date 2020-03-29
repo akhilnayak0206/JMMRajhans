@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Reusable Components/Header';
 import JumbotronEssay from '../Reusable Components/JumbotronEssay';
-import { Button, Card, notification, Modal } from 'antd'; // eslint-disable-line no-unused-vars
+import { Button, Card, Modal } from 'antd'; // eslint-disable-line no-unused-vars
 import firebase from '../config/fbConfig';
 import '../styles/EssayCovid.css';
 
@@ -24,7 +24,6 @@ const EssayCovid = () => {
         }
         let essayDocs = [];
         snapshot.forEach(doc => {
-          //   console.log('Document data:', doc.data());
           essayDocs.push(doc.data());
         });
         setEssayCards([...essayDocs]);
@@ -44,7 +43,6 @@ const EssayCovid = () => {
           visible={modalCard}
           onOk={() => {
             setModalCard(false);
-            // setModalData({});
           }}
           onCancel={() => {
             setModalCard(false);
@@ -64,7 +62,7 @@ const EssayCovid = () => {
           <p>{modalData.essay}</p>
         </Modal>
       )}
-      <div style={{ padding: '20px', paddingTop: '0px' }}>
+      <div className='paddingHorizontal20'>
         <h3 className='bolderFonts'>NAV-RAJHANS Essay Writing Competition</h3>
         <p>
           During this time where everyone is advised to stay at home, we are
@@ -85,16 +83,8 @@ const EssayCovid = () => {
           <b>End date: 4th April 2020 9 PM.</b>
         </p>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '20px'
-        }}
-      >
+      <h3 className='paddingHorizontal20 margin0'>Entries:</h3>
+      <div className='essayCards'>
         {essayCards &&
           essayCards.map(
             (value, key) =>
