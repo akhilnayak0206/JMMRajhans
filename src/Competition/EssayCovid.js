@@ -9,6 +9,8 @@ const { Meta } = Card;
 
 const EssayCovid = () => {
   const [essayCards, setEssayCards] = useState([]);
+  const [modalData, setModalData] = useState();
+  const [modalCard, setModalCard] = useState(false);
 
   useEffect(() => {
     firebase
@@ -22,7 +24,7 @@ const EssayCovid = () => {
         }
         let essayDocs = [];
         snapshot.forEach(doc => {
-          console.log('Document data:', doc.data());
+          //   console.log('Document data:', doc.data());
           essayDocs.push(doc.data());
         });
         setEssayCards([...essayDocs]);
@@ -36,6 +38,32 @@ const EssayCovid = () => {
     <div className='displayFlex column'>
       <Header />
       <JumbotronEssay />
+      {modalData && (
+        <Modal
+          title={modalData.name}
+          visible={modalCard}
+          onOk={() => {
+            setModalCard(false);
+            // setModalData({});
+          }}
+          onCancel={() => {
+            setModalCard(false);
+          }}
+          footer={[
+            <Button
+              key='ok'
+              type='primary'
+              onClick={() => {
+                setModalCard(false);
+              }}
+            >
+              Ok
+            </Button>
+          ]}
+        >
+          <p>{modalData.essay}</p>
+        </Modal>
+      )}
       <div style={{ padding: '20px', paddingTop: '0px' }}>
         <h3 className='bolderFonts'>NAV-RAJHANS Essay Writing Competition</h3>
         <p>
@@ -84,29 +112,22 @@ const EssayCovid = () => {
                   actions={[
                     <Button
                       type='primary'
-                      shape='round'
-                      style={{ width: '80%', margin: '0 15px' }}
+                      onClick={() => {
+                        setModalCard(true);
+                        setModalData(value);
+                      }}
                     >
-                      First
-                    </Button>,
-                    <Button
-                      type='primary'
-                      shape='round'
-                      style={{ width: '80%', margin: '0 15px' }}
-                    >
-                      Second
+                      View Essay
                     </Button>
                   ]}
-                  //   cover={
-                  //     <img
-                  //       alt='Food'
-                  //       src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584885921/Covid19JMM/32.jpg'
-                  //     />
-                  //   }
+                  onClick={() => {
+                    setModalCard(true);
+                    setModalData(value);
+                  }}
                 >
                   <Meta
                     // title='Europe Street beat'
-                    description={`Description should not be bigger than this. The essay will have some words over here then....`}
+                    description={`${value.essay.slice(0, 81)}...`}
                   />
                 </Card>
               )

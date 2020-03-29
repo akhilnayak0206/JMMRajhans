@@ -16,7 +16,7 @@ const App = () => {
         <Route exact path='/fight-covid19' component={DrawingCovid} />
         {/* <Route path='/comingsoon' component={ComingSoon} /> */}
         <Route exact path='/home' component={Home} />
-        <Route exact path='/fight-covid19-essay' component={EssayCovid} />
+        <Route exact path='/essay-mar20' component={EssayCovid} />
         {/* <Route exact path='/maskForAll' component={MaskForAll} /> */}
         {/* <Route exact path='/fight-covid19-recipe' component={RecipeCovid} /> */}
         <Route exact path='/contactus' component={ContactUs} />
