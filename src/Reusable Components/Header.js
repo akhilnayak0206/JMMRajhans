@@ -32,19 +32,21 @@ const Header = () => {
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className='ml-auto align-items-flex-end' navbar>
-          <NavItem>
+          {/* <NavItem>
             <NavLink href='/home'>Home</NavLink>
-          </NavItem>
-          {/* <UncontrolledDropdown nav inNavbar>
+          </NavItem> */}
+          <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               Ongoing/ Upcoming Competition
             </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem>
-                <NavLink href='/fight-covid19'>Fight Covid-19</NavLink>
+                <NavLink href='/essay-mar20'>
+                  Fight Covid-19 Story Writing
+                </NavLink>
               </DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown> */}
+          </UncontrolledDropdown>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               Past Competition

@@ -3,6 +3,7 @@ import { Jumbotron, Button, Container } from 'reactstrap';
 import { Modal, notification, Input, InputNumber } from 'antd';
 import firebase from '../config/fbConfig';
 import '../styles/EssayCovid.css';
+import EssayModalCovid from './EssayModalCovid';
 
 const { TextArea } = Input;
 
@@ -90,8 +91,18 @@ const JumbotronEssay = props => {
         onOk={() => setLearnMore(false)}
         confirmLoading={!learnMore}
         onCancel={() => setLearnMore(false)}
+        footer={[
+          <Button
+            key='ok'
+            onClick={() => {
+              setLearnMore(false);
+            }}
+          >
+            OK
+          </Button>
+        ]}
       >
-        <p>Learn more</p>
+        <EssayModalCovid />
       </Modal>
       <Modal
         title='Submit Essay'
@@ -99,6 +110,14 @@ const JumbotronEssay = props => {
         onOk={onFinish}
         confirmLoading={loadingSubmit}
         onCancel={() => setSubmitModal(false)}
+        footer={[
+          <Button key='cancel' onClick={() => setSubmitModal(false)}>
+            Cancel
+          </Button>,
+          <Button color='success' key='ok' onClick={onFinish}>
+            OK
+          </Button>
+        ]}
       >
         <h6>Name:</h6>
         <Input
@@ -142,11 +161,14 @@ const JumbotronEssay = props => {
             NAV-RAJHANS fights COVID-19 boredom with essay.
           </p> */}
           <p className='lead'>
-            <Button color='primary' onClick={() => setLearnMore(true)}>
-              Learn More
+            <Button
+              style={{ backgroundColor: 'black' }}
+              onClick={() => setLearnMore(true)}
+            >
+              Details
             </Button>
             <Button
-              color='primary'
+              style={{ backgroundColor: 'black' }}
               className='marginLeft10'
               onClick={() => setSubmitModal(true)}
             >

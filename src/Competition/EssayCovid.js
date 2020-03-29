@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Reusable Components/Header';
 import JumbotronEssay from '../Reusable Components/JumbotronEssay';
-import { Button, Card, Modal } from 'antd'; // eslint-disable-line no-unused-vars
+import { Button } from 'reactstrap';
+import { Card, Modal } from 'antd'; // eslint-disable-line no-unused-vars
 import firebase from '../config/fbConfig';
 import '../styles/EssayCovid.css';
 
@@ -51,13 +52,13 @@ const EssayCovid = () => {
           }}
           footer={[
             <Button
-              key='ok'
+              key='cancel'
               type='primary'
               onClick={() => {
                 setModalCard(false);
               }}
             >
-              Ok
+              Cancel
             </Button>
           ]}
         >
@@ -83,32 +84,13 @@ const EssayCovid = () => {
           NAV RAJHANS SHORT STORY WRITING COMPETITION
         </h2>
         <h6>(Open to all society members of all age groups)</h6>
-        <h3>Introduction:</h3>
-        <p>
-          As a child we all have loved telling stories and most of the times we
-          had 'created' them. Sometimes to hide our own mischief and sometimes
-          just to save a friend / sibling from getting punished.
-        </p>
-        <p>
-          Are we still good at it? Let's find out by participating in this
-          unique competition.
-        </p>
-        <h3>Here are some basic rules:</h3>
-        <ul>
-          <li>
-            The story must start with the following sentence and then build on
-            it the way you wish to.
-          </li>
-          <br />
+        <h4>
+          <b>Topic:</b>
+        </h4>
+        <h6>
           <b>"I couldn't believe my eyes..."</b>
-          <br />
-          <br />
-          <li>
-            You can type out your story. and the story can be typed in a
-            language of your choice (English, Hindi, Gujarati, Marathi
-            preferred)
-          </li>
-          <br />
+        </h6>
+        <h6>
           <b>
             "मुझे अपनी आँखों पर विश्वास ही नहीं हो रहा था....."
             <br />
@@ -117,26 +99,9 @@ const EssayCovid = () => {
             "હું મારી આંખો પર વિશ્વાસ કરી શક્યો નહીં..."
             <br />
           </b>
-          <br />
-          <li>
-            Make your story as interesting as possible. It can be humorous,
-            suspense, scary or just about anything that anyone would enjoy
-            reading.
-          </li>
-          <li>
-            You must submit your entry on or before{' '}
-            <b>Saturday, April 4, 2020</b>{' '}
-          </li>
-          <li>
-            So members, make the fullest use of all the free time you have and
-            show the world how good you are, at 'making stories'
-            <span role='img' aria-label='winking face'>
-              &#128540;
-            </span>
-          </li>
-        </ul>
-        <b>Your time starts now!!!</b>
+        </h6>
       </div>
+
       <h3 className='paddingHorizontal20 margin0'>Entries:</h3>
       <div className='essayCards'>
         {essayCards &&
@@ -161,7 +126,7 @@ const EssayCovid = () => {
                         setModalData(value);
                       }}
                     >
-                      View Essay
+                      VIEW MORE
                     </Button>
                   ]}
                   onClick={() => {
