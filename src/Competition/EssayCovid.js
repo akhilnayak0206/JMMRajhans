@@ -29,6 +29,7 @@ const EssayCovid = () => {
           // console.log(doc.data());
           essayDocs.push(doc.data());
         });
+        // console.log(essayDocs);
         setEssayCards([...essayDocs]);
       })
       .catch(err => {
@@ -84,22 +85,25 @@ const EssayCovid = () => {
           NAV RAJHANS SHORT STORY WRITING COMPETITION
         </h2>
         <h6>(Open to all society members of all age groups)</h6>
-        <h4>
-          <b>Topic:</b>
-        </h4>
-        <h6>
-          <b>"I couldn't believe my eyes..."</b>
+        <p>
+          The story must start with the following sentence and then build on it
+          the way you wish to.
+        </p>
+        <h6 className='bolderFonts'>"I couldn't believe my eyes..."</h6>
+        <br />
+        <p>
+          You can type out your story. and the story can be typed in a language
+          of your choice (English, Hindi, Gujarati, Marathi preferred)
+        </p>
+        <h6 className='bolderFonts'>
+          "मुझे अपनी आँखों पर विश्वास ही नहीं हो रहा था....."
+          <br />
+          " माझा माझ्या डोळ्यांवर विश्वास बसत नव्हता...."
+          <br />
+          "હું મારી આંખો પર વિશ્વાસ કરી શક્યો નહીં..."
+          <br />
         </h6>
-        <h6>
-          <b>
-            "मुझे अपनी आँखों पर विश्वास ही नहीं हो रहा था....."
-            <br />
-            " माझा माझ्या डोळ्यांवर विश्वास बसत नव्हता...."
-            <br />
-            "હું મારી આંખો પર વિશ્વાસ કરી શક્યો નહીં..."
-            <br />
-          </b>
-        </h6>
+        <br />
       </div>
 
       <h3 className='paddingHorizontal20 margin0'>Entries:</h3>
