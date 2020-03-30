@@ -13,15 +13,15 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/fight-covid19' component={DrawingCovid} />
         <Route exact path='/essay-mar20' component={EssayCovid} />
+        <Route exact path='/fight-covid19' component={DrawingCovid} />
         <Route exact path='/contactus' component={ContactUs} />
         {/* <Route path='/comingsoon' component={ComingSoon} /> */}
         {/* <Route exact path='/home' component={Home} /> */}
         {/* <Route exact path='/maskForAll' component={MaskForAll} /> */}
         {/* <Route exact path='/fight-covid19-recipe' component={RecipeCovid} /> */}
         {/* <Route path='/receipt/:token' component={Receipt} /> */}
-        <Redirect to='/fight-covid19' />
+        <Redirect to='/essay-mar20' />
       </Switch>
     </BrowserRouter>
   );

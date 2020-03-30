@@ -64,7 +64,9 @@ const EssayCovid = () => {
           ]}
         >
           <p>{modalData.essay}</p>
-          <p>
+          <p style={{ color: 'gray' }}>
+            Flat No.:{modalData.flatNo}
+            <br />
             Date:{' '}
             {`${new Date(
               modalData.timestamp.seconds * 1000
@@ -81,20 +83,20 @@ const EssayCovid = () => {
         </Modal>
       )}
       <div className='paddingHorizontal20'>
-        <h2 className='bolderFonts'>
-          NAV RAJHANS SHORT STORY WRITING COMPETITION
-        </h2>
+        <h2>SHORT STORY WRITING COMPETITION</h2>
         <h6>(Open to all society members of all age groups)</h6>
         <p>
           The story must start with the following sentence and then build on it
           the way you wish to.
         </p>
+        <br />
         <h6 className='bolderFonts'>"I couldn't believe my eyes..."</h6>
         <br />
         <p>
           You can type out your story. and the story can be typed in a language
           of your choice (English, Hindi, Gujarati, Marathi preferred)
         </p>
+        <br />
         <h6 className='bolderFonts'>
           "मुझे अपनी आँखों पर विश्वास ही नहीं हो रहा था....."
           <br />

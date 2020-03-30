@@ -13,6 +13,7 @@ const JumbotronEssay = props => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [flatNo, setFlatNo] = useState(0);
+  const [age, setAge] = useState('NA');
   const [essay, setEssay] = useState('');
   const [loadingSubmit, setLoadingSubmit] = useState(false);
 
@@ -56,6 +57,7 @@ const JumbotronEssay = props => {
           name,
           email,
           flatNo,
+          age,
           essay,
           approved: false,
           timestamp: new Date(Date.now())
@@ -65,6 +67,7 @@ const JumbotronEssay = props => {
           setSubmitModal(false);
           setName('');
           setEmail('');
+          setAge('NA');
           setEssay('');
           notification['success']({
             message: 'Congratulations',
@@ -86,7 +89,7 @@ const JumbotronEssay = props => {
   return (
     <>
       <Modal
-        title='Learn More'
+        title='Details'
         visible={learnMore}
         onOk={() => setLearnMore(false)}
         confirmLoading={!learnMore}
@@ -143,6 +146,15 @@ const JumbotronEssay = props => {
           min={1}
           placeholder='Enter Flat Number'
           onChange={value => setFlatNo(value)}
+        />
+        <br />
+        <br />
+        <h6>Age:</h6>
+        <InputNumber
+          max={130}
+          min={1}
+          placeholder='NA'
+          onChange={value => setAge(value)}
         />
         <br />
         <br />

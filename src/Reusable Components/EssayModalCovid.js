@@ -3,7 +3,7 @@ import React from 'react';
 const EssayModalCovid = () => {
   return (
     <>
-      <h3>Introduction:</h3>
+      <h3>NAV-RAJHANS SHORT STORY WRITING COMPETITION</h3>
       <p>
         As a child we all have loved telling stories and most of the times we
         had 'created' them. Sometimes to hide our own mischief and sometimes
