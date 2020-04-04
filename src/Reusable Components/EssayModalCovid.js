@@ -43,7 +43,7 @@ const EssayModalCovid = () => {
           reading.
         </li>
         <li>
-          You must submit your entry on or before <b>Saturday, April 4, 2020</b>{' '}
+          You must submit your entry on or before <b>Sunday, April 5, 2020</b>{' '}
         </li>
         <li>
           So members, make the fullest use of all the free time you have and

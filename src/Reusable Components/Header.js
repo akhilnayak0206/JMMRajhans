@@ -55,6 +55,11 @@ const Header = () => {
               <DropdownItem>
                 <NavLink href='/fight-covid19'>Fight Covid-19 Drawing</NavLink>
               </DropdownItem>
+              {/* <DropdownItem>
+                <NavLink href='/essay-mar20'>
+                  Fight Covid-19 Story Writing
+                </NavLink>
+              </DropdownItem> */}
             </DropdownMenu>
           </UncontrolledDropdown>
           {/* <NavItem>

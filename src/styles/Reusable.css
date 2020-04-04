@@ -134,3 +134,7 @@ h2 {
   padding: 0px 10px;
   justify-content: flex-end;
 }
+
+.whiteSpace {
+  white-space: pre-wrap;
+}

@@ -63,7 +63,7 @@ const EssayCovid = () => {
             </Button>
           ]}
         >
-          <p>{modalData.essay}</p>
+          <p className='whiteSpace'>{modalData.essay}</p>
           <p style={{ color: 'gray' }}>
             Flat No.:{modalData.flatNo}
             <br />
