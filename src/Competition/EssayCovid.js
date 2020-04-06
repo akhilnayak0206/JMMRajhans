@@ -19,20 +19,20 @@ const EssayCovid = () => {
       .collection('essay-covid19')
       .orderBy('timestamp')
       .get()
-      .then(snapshot => {
+      .then((snapshot) => {
         if (snapshot.empty) {
           console.log('No matching documents.');
           return;
         }
         let essayDocs = [];
-        snapshot.forEach(doc => {
+        snapshot.forEach((doc) => {
           // console.log(doc.data());
           essayDocs.push(doc.data());
         });
         // console.log(essayDocs);
         setEssayCards([...essayDocs]);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log('Error getting documents', err);
       });
   }, []);
@@ -60,7 +60,7 @@ const EssayCovid = () => {
               }}
             >
               Cancel
-            </Button>
+            </Button>,
           ]}
         >
           <p className='whiteSpace'>{modalData.essay}</p>
@@ -68,11 +68,9 @@ const EssayCovid = () => {
             Flat No.:{modalData.flatNo}
             <br />
             Date:{' '}
-            {`${new Date(
-              modalData.timestamp.seconds * 1000
-            ).getDate()}/${new Date(
-              modalData.timestamp.seconds * 1000
-            ).getMonth() + 1}/${new Date(
+            {`${new Date(modalData.timestamp.seconds * 1000).getDate()}/${
+              new Date(modalData.timestamp.seconds * 1000).getMonth() + 1
+            }/${new Date(
               modalData.timestamp.seconds * 1000
             ).getFullYear()} ${new Date(
               modalData.timestamp.seconds * 1000
@@ -106,6 +104,7 @@ const EssayCovid = () => {
           <br />
         </h6>
         <br />
+        <p>Note: Responses for this competition has been closed.</p>
       </div>
 
       <h3 className='paddingHorizontal20 margin0'>Entries:</h3>
@@ -122,7 +121,7 @@ const EssayCovid = () => {
                     width: 300,
                     margin: '10px',
                     borderRadius: 5,
-                    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)'
+                    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
                   }}
                   actions={[
                     <Button
@@ -133,7 +132,7 @@ const EssayCovid = () => {
                       }}
                     >
                       VIEW MORE
-                    </Button>
+                    </Button>,
                   ]}
                   onClick={() => {
                     setModalCard(true);

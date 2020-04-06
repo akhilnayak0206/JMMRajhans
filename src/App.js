@@ -13,15 +13,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
+        <Route exact path='/contactus' component={ContactUs} />
         <Route exact path='/essay-mar20' component={EssayCovid} />
         <Route exact path='/fight-covid19' component={DrawingCovid} />
-        <Route exact path='/contactus' component={ContactUs} />
-        {/* <Route path='/comingsoon' component={ComingSoon} /> */}
         <Route exact path='/home' component={Home} />
+        <Route path='/receipt/:token' component={Receipt} />
+        {/* <Route path='/comingsoon' component={ComingSoon} /> */}
         {/* <Route exact path='/maskForAll' component={MaskForAll} /> */}
         {/* <Route exact path='/fight-covid19-recipe' component={RecipeCovid} /> */}
-        <Route path='/receipt/:token' component={Receipt} />
-        <Redirect to='/essay-mar20' />
+        <Redirect exact from='/' to='/fight-covid19' />
+        <Redirect to='/fight-covid19' />
       </Switch>
     </BrowserRouter>
   );

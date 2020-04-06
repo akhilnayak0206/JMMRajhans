@@ -344,6 +344,7 @@ const Receipt = ({ match }) => {
 
 export default Receipt;
 
+// eslint-disable-next-line no-lone-blocks
 {
   /* <div className='dataReceipt'>
                   {verifiedToken.timestamp && (

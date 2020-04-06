@@ -54,6 +54,7 @@ const EssayModalCovid = () => {
         </li>
       </ul>
       <b>Your time starts now!!!</b>
+      <p>Note: Responses for this competition has been closed.</p>
     </>
   );
 };

@@ -1,46 +1,47 @@
 import React, { useState } from 'react';
 import { Jumbotron, Button, Container } from 'reactstrap';
-import { Modal, notification, Input, InputNumber } from 'antd';
+import { Modal, notification, Input, InputNumber } from 'antd'; // eslint-disable-line no-unused-vars
 import firebase from '../config/fbConfig';
 import '../styles/EssayCovid.css';
 import EssayModalCovid from './EssayModalCovid';
 
-const { TextArea } = Input;
+const { TextArea } = Input; // eslint-disable-line no-unused-vars
 
-const JumbotronEssay = props => {
+const JumbotronEssay = (props) => {
   const [learnMore, setLearnMore] = useState(false);
-  const [submitModal, setSubmitModal] = useState(false);
+  const [submitModal, setSubmitModal] = useState(false); // eslint-disable-line no-unused-vars
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [flatNo, setFlatNo] = useState(0);
+  const [flatNo, setFlatNo] = useState(0); // eslint-disable-line no-unused-vars
   const [age, setAge] = useState('NA');
   const [essay, setEssay] = useState('');
-  const [loadingSubmit, setLoadingSubmit] = useState(false);
+  const [loadingSubmit, setLoadingSubmit] = useState(false); // eslint-disable-line no-unused-vars
 
+  // eslint-disable-next-line no-unused-vars
   const onFinish = () => {
     if (!name.length) {
       notification['error']({
         message: 'Error in name',
-        description: 'You need to enter name.'
+        description: 'You need to enter name.',
       });
     }
     // eslint-disable-next-line no-useless-escape
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       notification['error']({
         message: 'Error in email',
-        description: 'You have to enter a valid email.'
+        description: 'You have to enter a valid email.',
       });
     }
     if (!flatNo) {
       notification['error']({
         message: 'Error in Flat Number',
-        description: 'You have to enter valid Flat Number.'
+        description: 'You have to enter valid Flat Number.',
       });
     }
     if (essay.length <= 80) {
       notification['error']({
         message: 'Error in Essay',
-        description: 'You have to enter at least 81 words.'
+        description: 'You have to enter at least 81 words.',
       });
     }
     if (
@@ -60,9 +61,9 @@ const JumbotronEssay = props => {
           age,
           essay,
           approved: false,
-          timestamp: new Date(Date.now())
+          timestamp: new Date(Date.now()),
         })
-        .then(ref => {
+        .then((ref) => {
           setLoadingSubmit(false);
           setSubmitModal(false);
           setName('');
@@ -72,15 +73,15 @@ const JumbotronEssay = props => {
           notification['success']({
             message: 'Congratulations',
             description:
-              'You have successfully entered the competition. Admin will soon approve your essay.'
+              'You have successfully entered the competition. Admin will soon approve your essay.',
           });
         })
-        .catch(err => {
+        .catch((err) => {
           setLoadingSubmit(false);
 
           notification['Error']({
             message: 'Sorry',
-            description: 'Error in entering the competition. Please try again.'
+            description: 'Error in entering the competition. Please try again.',
           });
         });
     }
@@ -102,12 +103,12 @@ const JumbotronEssay = props => {
             }}
           >
             OK
-          </Button>
+          </Button>,
         ]}
       >
         <EssayModalCovid />
       </Modal>
-      <Modal
+      {/* <Modal
         title='Submit Essay'
         visible={submitModal}
         onOk={onFinish}
@@ -119,7 +120,7 @@ const JumbotronEssay = props => {
           </Button>,
           <Button color='success' key='ok' onClick={onFinish}>
             OK
-          </Button>
+          </Button>,
         ]}
       >
         <h6>Name:</h6>
@@ -127,7 +128,7 @@ const JumbotronEssay = props => {
           allowClear={true}
           placeholder='Enter Name'
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
         />
         <br />
         <br />
@@ -136,7 +137,7 @@ const JumbotronEssay = props => {
           allowClear={true}
           value={email}
           placeholder='Enter Email'
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <br />
         <br />
@@ -145,7 +146,7 @@ const JumbotronEssay = props => {
           max={418}
           min={1}
           placeholder='Enter Flat Number'
-          onChange={value => setFlatNo(value)}
+          onChange={(value) => setFlatNo(value)}
         />
         <br />
         <br />
@@ -154,7 +155,7 @@ const JumbotronEssay = props => {
           max={130}
           min={1}
           placeholder='NA'
-          onChange={value => setAge(value)}
+          onChange={(value) => setAge(value)}
         />
         <br />
         <br />
@@ -163,9 +164,9 @@ const JumbotronEssay = props => {
           rows={10}
           value={essay}
           placeholder='Enter your Essay. No need to format. Just start typing.'
-          onChange={e => setEssay(e.target.value)}
+          onChange={(e) => setEssay(e.target.value)}
         />
-      </Modal>
+      </Modal> */}
       <Jumbotron fluid className='heroImage displayFlex alignFlexEnd'>
         <Container fluid className='displayFlex column'>
           {/* <h4 className='display-3 colorWhite bolderFonts'>Fight Covid-19!</h4>
@@ -179,13 +180,13 @@ const JumbotronEssay = props => {
             >
               Details
             </Button>
-            <Button
+            {/* <Button
               style={{ backgroundColor: 'black' }}
               className='marginLeft10'
               onClick={() => setSubmitModal(true)}
             >
               Submit Essay
-            </Button>
+            </Button> */}
           </p>
         </Container>
       </Jumbotron>

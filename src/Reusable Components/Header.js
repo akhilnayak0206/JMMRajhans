@@ -10,7 +10,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
 } from 'reactstrap';
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
           src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584280791/Dashboard%20Online/JMMLogoTransparent.png'
           alt='JMM Rajhans'
           style={{
-            height: '30px'
+            height: '30px',
           }}
         />
       </NavbarBrand>
@@ -39,13 +39,13 @@ const Header = () => {
             <DropdownToggle nav caret>
               Ongoing/ Upcoming Competition
             </DropdownToggle>
-            <DropdownMenu right>
+            {/* <DropdownMenu right>
               <DropdownItem>
                 <NavLink href='/essay-mar20'>
                   Fight Covid-19 Story Writing
                 </NavLink>
               </DropdownItem>
-            </DropdownMenu>
+            </DropdownMenu> */}
           </UncontrolledDropdown>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
@@ -55,11 +55,11 @@ const Header = () => {
               <DropdownItem>
                 <NavLink href='/fight-covid19'>Fight Covid-19 Drawing</NavLink>
               </DropdownItem>
-              {/* <DropdownItem>
+              <DropdownItem>
                 <NavLink href='/essay-mar20'>
                   Fight Covid-19 Story Writing
                 </NavLink>
-              </DropdownItem> */}
+              </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
           {/* <NavItem>
