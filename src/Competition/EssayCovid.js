@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Header from '../Reusable Components/Header';
 import JumbotronEssay from '../Reusable Components/JumbotronEssay';
 import { Button } from 'reactstrap';
@@ -39,6 +40,13 @@ const EssayCovid = () => {
 
   return (
     <div className='displayFlex column'>
+      <Helmet>
+        <title>Nav-Rajhans Short Story Writing Competition</title>
+        <meta
+          name='description'
+          content='Rajhans fights covid19 by writing short stories.'
+        />
+      </Helmet>
       <Header />
       <JumbotronEssay />
       {modalData && (

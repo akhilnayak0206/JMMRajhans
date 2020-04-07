@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Reusable Components/Header';
 import NewCarousel from '../Reusable Components/NewCarousel';
+import { Helmet } from 'react-helmet';
 import allImages from '../Images';
 
 import '../styles/RecipeCovid.css';
@@ -8,10 +9,17 @@ import '../styles/RecipeCovid.css';
 const DrawingCovid = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Helmet>
+        <title>Nav-Rajhans Drawing Competition</title>
+        <meta
+          name='description'
+          content='Rajhans fights covid19 by making drawings and raising awareness.'
+        />
+      </Helmet>
       <Header />
       <NewCarousel allImages={allImages} />
       <div style={{ padding: '20px' }}>
-        <h3 className='bolderFonts'>NAV-RAJHANS Drawing COMPETITION</h3>
+        <h3 className='bolderFonts'>Nav-Rajhans Drawing Competition</h3>
         <p>
           During this time where everyone is advised to stay at home, we are
           excited to announce a drawing/painting competition for children and
