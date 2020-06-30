@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import '../styles/Header.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,9 @@ const Header = () => {
     <Navbar color='light' light expand='md' className='stickyHeader'>
       <NavbarBrand href='/'>
         <img
-          src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584280791/Dashboard%20Online/JMMLogoTransparent.png'
+          src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1593492065/Dashboard%20Online/jmm_building_fin.png'
           alt='JMM Rajhans'
-          style={{
-            height: '30px',
-          }}
+          className='headerLogo'
         />
       </NavbarBrand>
       <NavbarToggler onClick={toggle} />

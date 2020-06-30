@@ -217,6 +217,11 @@ const Receipt = ({ match }) => {
                       width: '100%',
                     }}
                   >
+                    {/* <img
+                      src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1593492065/Dashboard%20Online/jmm_building_fin.png'
+                      alt='JMM Rajhans'
+                      style={{ height: '70px', objectFit: 'contain' }}
+                    /> */}
                     <h4 className='App bolderFonts'>Jai Mitra Mandal</h4>
                     <h6 className='App bolderFonts'>NAV RAJHANS CHS</h6>
                   </div>
@@ -324,10 +329,11 @@ const Receipt = ({ match }) => {
   } else {
     return (
       <div className='App'>
+        <Header />
         <header className='Success-header'>
           <ZoomInDiv>
             <img
-              src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1584280791/Dashboard%20Online/JMMLogoTransparent.png'
+              src='https://res.cloudinary.com/dx0wpoeyu/image/upload/v1593492065/Dashboard%20Online/jmm_building_fin.png'
               className='JMM-logo'
               alt='logo'
             />
