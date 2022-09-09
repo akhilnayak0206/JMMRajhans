@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { zoomIn } from 'react-animations';
 import Header from './Reusable Components/Header';
 import './styles/Receipt.css';
+import jwt from 'jsonwebtoken';
 
 const month = [];
 month[0] = 'January';
@@ -61,24 +62,31 @@ const Receipt = ({ match }) => {
 
   const checkToken = async (token) => {
     if (token) {
-      const config = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json' // prettier-ignore
-        },
-        body: JSON.stringify({ token }),
+      // const config = {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Accept': 'application/json' // prettier-ignore
+      //   },
+      //   body: JSON.stringify({ token }),
+      // };
+      // try {
+      //   const fetchResponse = await fetch(
+      //     'https://us-central1-akhilprivateapis.cloudfunctions.net/app/jwtrajhans',
+      //     config
+      //   );
+      // const dataVerifyToken = await fetchResponse.json();
+      let jwtData = jwt.decode(token);
+      const dataVerifyToken = {
+        verified: true,
+        ...jwtData,
       };
-      try {
-        const fetchResponse = await fetch(
-          'https://us-central1-akhilprivateapis.cloudfunctions.net/app/jwtrajhans',
-          config
-        );
-        const dataVerifyToken = await fetchResponse.json();
-        setVerifiedToken(dataVerifyToken);
-      } catch (e) {
-        console.log(e, 'error fetching');
-      }
+
+      // });
+      setVerifiedToken(dataVerifyToken);
+      //   } catch (e) {
+      //     console.log(e, 'error fetching');
+      //   }
     } else {
       notification['error']({
         message: 'Error',
